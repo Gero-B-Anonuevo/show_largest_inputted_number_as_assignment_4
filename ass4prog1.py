@@ -6,8 +6,9 @@
 first_number = int(input("Enter your first number: "))
 #pop up ask-int for second number
 second_number = int(input("Enter your second number: "))
-print(second_number)
 #pop up ask-int for third number
+third_number = int(input("Enter your last number: "))
+print(third_number)
 #and so on can be more than 3 numbers
 #store ng data sa variables
 #solve using set of if-else function
