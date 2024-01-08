@@ -14,16 +14,18 @@ if first_popup == True:
     second_number = simpledialog.askinteger("Second Number", "Please input your second number")
     #pop up ask-int for third number
     third_number = simpledialog.askinteger("Third Number", "Please input your third number")
-
-#and so on can be more than 3 numbers
+    #and so on can be more than 3 numbers
+    fourth_number = simpledialog.askinteger("Fourth Number", "Please input your fourth number")
 #solve using set of if-else function
-if first_number > second_number and first_number > third_number:
+if first_number > second_number and first_number > third_number and first_number > fourth_number:
     largest = first_number
-elif second_number > first_number and second_number > third_number:
+elif second_number > first_number and second_number > fourth_number and second_number > third_number:
     largest = second_number
+elif fourth_number > first_number and fourth_number > second_number and fourth_number > third_number:
+    largest = fourth_number
 else:
     largest = third_number
-print (largest)
+print(largest)
 #show highest number, ok button and show list in descending order button
 # if ok then end if latter then new pop up showmessage with ok only button
 #remove existing data   
