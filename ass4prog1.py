@@ -16,13 +16,16 @@ if first_popup == True:
     third_number = simpledialog.askinteger("Third Number", "Please input your third number")
     #and so on can be more than 3 numbers
     fourth_number = simpledialog.askinteger("Fourth Number", "Please input your fourth number")
+    fifth_number = simpledialog.askinteger("Fifth Number", "Please input your fifth number")
 #solve using set of if-else function
-if first_number > second_number and first_number > third_number and first_number > fourth_number:
+if first_number > second_number and first_number > third_number and first_number > fourth_number and first_number > fifth_number:
     largest = first_number
-elif second_number > first_number and second_number > fourth_number and second_number > third_number:
+elif second_number > first_number and second_number > fourth_number and second_number > third_number and second_number > fifth_number:
     largest = second_number
-elif fourth_number > first_number and fourth_number > second_number and fourth_number > third_number:
+elif fourth_number > first_number and fourth_number > second_number and fourth_number > third_number and fourth_number > fifth_number:
     largest = fourth_number
+elif fifth_number > first_number and fifth_number > second_number and fifth_number > third_number and fifth_number > fourth_number:
+    largest = fifth_number
 else:
     largest = third_number
 print(largest)
