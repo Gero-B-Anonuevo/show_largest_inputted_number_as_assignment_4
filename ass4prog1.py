@@ -10,7 +10,8 @@ first_popup = tk.messagebox.askyesno(title="Greetings!", message= "Hello! Do you
 if first_popup == True:
     first_number = simpledialog.askinteger("First Number", "Please input your first number")
     second_number = simpledialog.askinteger("Second Number", "Please input your second number")
-    print (second_number)
+    third_number = simpledialog.askinteger("Third Number", "Please input your third number")
+    print (first_number, second_number, third_number)
 #pop up ask-int for first number 
 #first_number = int(input("Enter your first number: "))
     
