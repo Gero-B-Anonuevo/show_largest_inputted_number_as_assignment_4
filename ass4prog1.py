@@ -9,7 +9,7 @@ from tkinter import simpledialog
 first_popup = tk.messagebox.askyesno(title="Greetings!", message= "Hello! Do you want to play a game? You will give me numbers and I'll try to pick the highest number. Game?")
 if first_popup == True:
     #pop up ask-int for first number
-    first_number = simpledialog.askinteger("First Number", "Please input your first number")
+    first_number = simpledialog.askinteger("First Number", 'Please input your first number. Input "0" if you do not want to input a number.')
     #pop up ask-int for second number
     second_number = simpledialog.askinteger("Second Number", "Please input your second number")
     #pop up ask-int for third number
