@@ -30,5 +30,18 @@ else:
     largest = third_number
 print(largest)
 #show highest number, ok button and show list in descending order button
+ctk.set_appearance_mode("system")
+ctk.set_default_color_theme("dark-blue")
+
+base_window = ctk.CTk()
+base_window.title("Here is the result of my analyzation")
+
+frame_bw = ctk.CTkFrame(base_window)
+frame_bw.pack(padx= 60, pady=20)
+
+first_label = ctk.CTkLabel(frame_bw, text=("The largest number you have inputted is: " + str(largest)), font=("sansSerif", 13))
+first_label.grid(row=0, column= 0, padx=10, pady=12)
+
+base_window.mainloop()
 # if ok then end if latter then new pop up showmessage with ok only button
 #remove existing data   
