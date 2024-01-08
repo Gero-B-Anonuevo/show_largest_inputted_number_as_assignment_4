@@ -32,6 +32,11 @@ else:
 def okay_function():
     base_window.destroy()
 
+def descending_order_func():
+    nums = [int(first_number), int(second_number), int(third_number), int(fourth_number), int(fifth_number)]
+    nums.sort(reverse=True)
+    print(nums)
+
 #show highest number, ok button and show list in descending order button
 ctk.set_appearance_mode("system")
 ctk.set_default_color_theme("dark-blue")
@@ -47,6 +52,9 @@ end_label.grid(row=0, column= 0, padx=10, pady=12)
 
 ok_button = ctk.CTkButton(frame_bw, text="Okay", command=okay_function)
 ok_button.grid(row= 1, column= 0, padx=10, pady=12)
+
+see_desc_ord = ctk.CTkButton(frame_bw, text= "See descending order", command= descending_order_func)
+see_desc_ord.grid(row= 2, column= 0, padx=10, pady=12)
 
 base_window.mainloop()
 # if ok then end if latter then new pop up showmessage with ok only button
