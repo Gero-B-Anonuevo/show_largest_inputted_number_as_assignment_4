@@ -11,12 +11,12 @@ if first_popup == True:
     #pop up ask-int for first number
     first_number = simpledialog.askinteger("First Number", 'Please input your first number. Input "0" if you do not want to input a number.')
     #pop up ask-int for second number
-    second_number = simpledialog.askinteger("Second Number", "Please input your second number")
+    second_number = simpledialog.askinteger("Second Number", 'Please input your second number. Input "0" if you do not want to input a number.')
     #pop up ask-int for third number
-    third_number = simpledialog.askinteger("Third Number", "Please input your third number")
+    third_number = simpledialog.askinteger("Third Number", 'Please input your third number. Input "0" if you do not want to input a number.')
     #and so on can be more than 3 numbers
-    fourth_number = simpledialog.askinteger("Fourth Number", "Please input your fourth number")
-    fifth_number = simpledialog.askinteger("Fifth Number", "Please input your fifth number")
+    fourth_number = simpledialog.askinteger("Fourth Number", 'Please input your fourth number. Input "0" if you do not want to input a number.')
+    fifth_number = simpledialog.askinteger("Fifth Number", 'Please input your fifth number. Input "0" if you do not want to input a number.')
 #solve using set of if-else function
 if first_number > second_number and first_number > third_number and first_number > fourth_number and first_number > fifth_number:
     largest = first_number
@@ -28,7 +28,10 @@ elif fifth_number > first_number and fifth_number > second_number and fifth_numb
     largest = fifth_number
 else:
     largest = third_number
-print(largest)
+
+def okay_function():
+    base_window.destroy()
+
 #show highest number, ok button and show list in descending order button
 ctk.set_appearance_mode("system")
 ctk.set_default_color_theme("dark-blue")
@@ -39,8 +42,11 @@ base_window.title("Here is the result of my analyzation")
 frame_bw = ctk.CTkFrame(base_window)
 frame_bw.pack(padx= 60, pady=20)
 
-first_label = ctk.CTkLabel(frame_bw, text=("The largest number you have inputted is: " + str(largest)), font=("sansSerif", 13))
-first_label.grid(row=0, column= 0, padx=10, pady=12)
+end_label = ctk.CTkLabel(frame_bw, text=("The largest number you have inputted is: " + str(largest)), font=("sansSerif", 13))
+end_label.grid(row=0, column= 0, padx=10, pady=12)
+
+ok_button = ctk.CTkButton(frame_bw, text="Okay", command=okay_function)
+ok_button.grid(row= 1, column= 0, padx=10, pady=12)
 
 base_window.mainloop()
 # if ok then end if latter then new pop up showmessage with ok only button
